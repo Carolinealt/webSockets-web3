@@ -61,16 +61,16 @@ const MetaAuth = () => {
         }
     };
 
-    const handleAccountsChanged = (accounts) => {
-        if (accounts.length > 0) {
-            dispatch(updAddress(accounts[0]))
-            const userBalance = getTokenBalance(accounts[0]);
-            dispatch(updBalance(userBalance))
-        } else {
-            dispatch(updAddress(null))
+    // const handleAccountsChanged = (accounts) => {
+    //     if (accounts.length > 0) {
+    //         dispatch(updAddress(accounts[0]))
+    //         const userBalance = getTokenBalance(accounts[0]);
+    //         dispatch(updBalance(userBalance))
+    //     } else {
+    //         dispatch(updAddress(null))
 
-        }
-    };
+    //     }
+    // };
 
 
     useEffect(() => {
@@ -88,11 +88,10 @@ const MetaAuth = () => {
 
         }
 
-        window.ethereum.on('accountsChanged', handleAccountsChanged);
 
-        return () => {
-            window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
-        };
+        // return () => {
+        //     window.ethereum.removeListener('accountsChanged', handleAccountsChanged);
+        // };
 
 
     }, [address, dispatch]);
