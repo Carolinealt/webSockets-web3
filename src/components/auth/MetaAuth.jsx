@@ -3,10 +3,10 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { updAddress, updBalance } from "../../redux/metaSlice/metaSlice";
 import css from './MetaAuth.module.css'
-const ethereumRequest = async (setter) => {
+const ethereumRequest = async () => {
     try {
         const data = await window.ethereum.request({ method: 'eth_requestAccounts' });
-        setter(data[0]);
+        return data;
 
     } catch (error) {
         console.log(error.message);
@@ -42,7 +42,8 @@ const MetaAuth = () => {
 
     const handleClick = async () => {
         if (window.ethereum) {
-            await ethereumRequest(dispatch(updAddress));
+            const data = await ethereumRequest();
+            dispatch(updAddress(data))
             await getTokenBalance(address);
         }
         else {
