@@ -74,6 +74,9 @@ const MetaAuth = () => {
 
 
     useEffect(() => {
+        if (address === '') {
+            return
+        }
         const getUserData = async () => {
             await checkWalletConnection();
             const eth = await getTokenBalance(address);
