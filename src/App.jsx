@@ -1,5 +1,5 @@
 import MetaAuth from "./components/auth/MetaAuth"
-import Hero from "./components/hero/hero"
+import Hero from "./components/Hero/Hero"
 import Statistics from "./components/Statistics/Statistics"
 
 function App() {
