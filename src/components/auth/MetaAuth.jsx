@@ -9,7 +9,7 @@ const ethereumRequest = async (setter) => {
         setter(data[0]);
 
     } catch (error) {
-        console.error(error);
+        console.error(error.message);
     }
 }
 

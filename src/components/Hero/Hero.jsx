@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux"
 import { useEffect } from "react";
-import { ChartToDisplay } from "./ChartToDisplay/ChartToDisplay";
 import WSConnection from "../../ws/websockets";
+import { ChartToDisplay } from "./ChartToDisplay/ChartToDisplay";
 const Hero = () => {
     const array = useSelector(state => state.valuesHistory.items)
     const dispatch = useDispatch()
