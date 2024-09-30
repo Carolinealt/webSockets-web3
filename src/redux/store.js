@@ -23,7 +23,7 @@ const historyPersistConfig = {
 const metaPersistConfig = {
     key: 'meta',
     storage,
-    whitelist: ["balance", "address"]
+    whitelist: ["address"]
 }
 
 const persistedHystoryReducer = persistReducer(historyPersistConfig, historyReducer);
