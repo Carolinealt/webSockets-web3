@@ -16,9 +16,9 @@ export const ChartToDisplay = ({ data }) => {
                 borderWidth: 1,
                 tension: 0.1,
                 pointBackgroundColor: "rgba(152, 251, 152, 0.2)",
-                pointHitRadius: 0.5,
-                pointBorderWidth: 0.5,
-
+                pointHitRadius: 0.1,
+                pointBorderWidth: 0.1,
+                pointRadius: 2
             },
         ],
 
