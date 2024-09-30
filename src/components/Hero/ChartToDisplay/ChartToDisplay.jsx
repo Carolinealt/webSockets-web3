@@ -6,11 +6,11 @@ Chart.register(...registerables);
 
 export const ChartToDisplay = ({ data }) => {
     const chartData = {
-        labels: data.map(item => item.date), 
+        labels: data.map(item => item.date),
         datasets: [
             {
                 label: 'Bitcoin/USDT',
-                data: data.map(item => item.value),
+                data: data.map(item => item.price),
                 borderColor: 'rgba(75,192,192,1)',
                 backgroundColor: 'rgba(75,192,192,0.2)',
                 borderWidth: 1,

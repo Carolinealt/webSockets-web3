@@ -9,8 +9,6 @@ const Hero = () => {
         const cleanup = WSConnection(dispatch);
         return () => cleanup();
     }, [dispatch]);
-    
-
 
     return <>
         <ChartToDisplay data={array} />
